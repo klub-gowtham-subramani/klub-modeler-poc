@@ -1,4 +1,3 @@
-import styles from "@/styles/Home.module.css";
 // import ExternalLoadedBpmn from "../components/external-bpmn.component";
 import dynamic from 'next/dynamic'
 
@@ -26,14 +25,11 @@ export default function Home() {
   }
 
   return (
-    <main className={styles.main}>
       <ExternalLoadedBpmn
         url="http://localhost:8080/test-process.bpmn"
         onLoading={onLoading}
         onShown={onShown}
         onError={onError}
       />
-      {/* <BpmnViewer /> */}
-    </main>
   );
 }
